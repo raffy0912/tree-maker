@@ -81,17 +81,17 @@ function App() {
   // Example recursive render for tree structure
   
   return (
-    <div className="App p-8 mx-auto bg-white rounded-xl shadow-lg space-y-4 border-gray-300 border-1 flex flex-col">
+    <div className="App p-8 mx-auto bg-[#32333f] rounded-xl shadow-lg space-y-4 border-[#01020a]-300 border-1 flex flex-col">
       <div className="text-center space-y-4">  
-        <p className="text-lg font-semibold mb-4">Parent</p>
+        <p className="text-lg text-[#f5f6fb] font-semibold mb-4">Parent</p>
         <button 
           onClick={() => addChildHandler([])}
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          className="bg-[#51e2c2] text-[#312c3b] px-4 py-2 rounded hover:bg-blue-600">
           Add Child
         </button>
       </div>
 
-      <div className="children-container p-4 bg-white rounded-xl shadow-lg flex text-sm/6">
+      <div className="children-container p-4 bg-[#393a45] text-[#e0e2e8] rounded-xl shadow-lg flex text-sm/6">
         {children.map((node, idx) => (
           <Child
             key={idx}
