@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 interface TreeNode {
   title: string;
@@ -25,13 +26,13 @@ function Child({ node, path, level, addChildHandler, removeChildHandler }: Child
       onClick={() => removeChildHandler(path)}>-</button>
       <div className={`flex flex-row p-4 ${level === 3 ? 'text-sm' : ''}`}>
         {node.children?.map((child, idx) => (
-          <Child
-        key={idx}
-        node={child}
-        path={[...path, idx]}
-        level={level ? level + 1 : 1}
-        addChildHandler={addChildHandler}
-        removeChildHandler={removeChildHandler}
+        <Child
+          key={idx}
+          node={child}
+          path={[...path, idx]}
+          level={level ? level + 1 : 1}
+          addChildHandler={addChildHandler}
+          removeChildHandler={removeChildHandler}
           />
         ))}
       </div>

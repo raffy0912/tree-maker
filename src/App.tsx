@@ -93,14 +93,16 @@ function App() {
 
       <div className="children-container p-4 bg-[#393a45] text-[#e0e2e8] rounded-xl shadow-lg flex text-sm/6">
         {children.map((node, idx) => (
-          <Child
-            key={idx}
-            node={node}
-            path={[idx]}
-            level={node.level || 0}
-            addChildHandler={addChildHandler}
-            removeChildHandler={removeChildHandler}
-          />
+          
+            <Child
+              key={idx}
+              node={node}
+              path={[idx]}
+              level={node.level || 0}
+              addChildHandler={addChildHandler}
+              removeChildHandler={removeChildHandler}
+            />
+  
         ))}
       </div>    
     </div>
